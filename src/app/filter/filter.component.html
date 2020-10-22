@@ -1,24 +1,12 @@
 <div class="container mt-5 text-center">
     <h2>Filter</h2>
-    <p>Choose your preferences regarding quality, distance, cost of the product and more</p>
+    <p>Choose your preferences regarding type, area and quality of the product</p>
 </div>
 
 <div class="container text-center">
     <div class="slidecontainer">
         <div class="row mt-4">
             <div class="col-md-4">
-                <p>Distance</p>
-                <input type="range" min="1"  max="100" value="50" class="slider" id="distanceSlider">
-            </div>
-            <div class="col-md-4">
-                <p>Quality</p>
-                <input type="range" min="1" max="100" value="50" class="slider" id="qualitySlider">
-            </div>
-            <div class="col-md-4">
-                <p>Cost</p>
-                <input type="range" min="1" max="100" value="50" class="slider" id="costSlider">
-            </div>
-            <div class="col-md-4 mt-4">
                 <p>Type</p>
                 <select class="form-control">
                     <option value="MB">Mountain bikes</option>
@@ -28,10 +16,39 @@
                     <option value="FB">Folding bikes</option>
                     <option value="WB">Women's bikes</option>
                 </select>
+            </div>            
+            <div class="col-md-4">
+                <p>Area</p>
+                <select class="form-control">
+                    <option value="CPH">Copenhagen</option>
+                    <option value="ROS">Roskilde</option>
+                    <option value="SLA">Slagelse</option>
+                    <option value="ODE">Odense</option>
+                    <option value="AAR">Aarhus</option>
+                </select>
             </div>
+            <div class="col-md-4">
+                <p>Postal code</p>
+                <input type="text" class="form-control" placeholder="Input postal code">
+            </div>
+            <div class="col-md-4 mt-4">
+                <p>Distance</p>
+                <input type="range" min="1"  max="100" value="50" class="slider" id="distanceSlider">
+                <br><small class="text-muted">*requires postal code</small>
+            </div>
+            <div class="col-md-4 mt-4">
+                <p>Quality</p>
+                <input type="range" min="1" max="100" value="50" class="slider" id="qualitySlider">
+            </div>
+<!--
+            <div class="col-md-4">
+                <p>Cost</p>
+                <input type="range" min="1" max="100" value="50" class="slider" id="costSlider">
+            </div>
+-->
         </div>
     </div>
     <div class="container mt-5">
-        <button class="btn btn-dark" (click)="goToPage('card-swipe')">Search</button>
+        <button class="btn btn-dark btn-search" (click)="goToPage('card-swipe')">Search</button>
     </div>
 </div>
